@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formCadastro">
+        <p>Faça seu cadastro</p>
+        <label for="nome">Nome<input type="text" id="nome"></label>
+        <label for="email">Email<input type="text" id="email"></label>
+        <div id="avisoEmail" style="color: red;"></div>
+        <label for="cpf">Criar um usuário<input type="text" id="usuario"></label>
+        <div id="avisoUsuario" style="color: red;"></div>
+        <span id="usuario-existente"></span>
+        <label for="password">Criar uma senha<input type="password" id="senha"></label>
+        <label for="password">Repita a sua senha<input type="password" id="confirmaSenha"><span id="teste" class="material-symbols-outlined">visibility</span></label>
+        <div id="avisoSenha" style="color: red;"></div>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <script src="cadastroJS.js"></script>
+</body>
+</html>
