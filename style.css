@@ -107,10 +107,11 @@ a + a {
     cursor: pointer;
     color: #404040;
 }
-span {
+
+#span-senha_cadastro {
     position: relative;
-    top: -87px;
-    left: 210px;
+    top: -68px;
+    left: 380px;
     cursor: pointer;
     color: #404040;
 }
@@ -126,7 +127,6 @@ span {
 
 @media screen and (max-width: 360px) {
     form {
-        padding: 2rem;
         max-width: 15rem;
     }
     
@@ -134,6 +134,14 @@ span {
         position: relative;
         top: -67px;
         left: 240px;
+        cursor: pointer;
+        color: #404040;
+    }
+
+    #span-senha_cadastro {
+        position: relative;
+        top: -68px;
+        left: 224px;
         cursor: pointer;
         color: #404040;
     }
@@ -155,7 +163,7 @@ span {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     form {
         max-width: 20rem;
     }
@@ -166,23 +174,5 @@ span {
         left: 300px;
         cursor: pointer;
         color: #404040;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    form {
-        max-width: 35rem;
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    form {
-        max-width: 40rem;
-    }
-}
-
-@media screen and (orientation: landscape) {
-    form {
-        max-width: 25rem;
     }
 }
