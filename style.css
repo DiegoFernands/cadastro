@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #211c22;
     font-family: sans-serif;
     display: flex;
@@ -19,7 +21,7 @@ form {
     align-items: center;
     gap: 20px;
     width: 100%;
-    max-width: 28rem;
+    max-width: 20rem;
     background: #fff;
     padding: 4rem;
     border-radius: 0.5rem;
@@ -103,7 +105,7 @@ a + a {
 #span-login {
     position: relative;
     top: -67px;
-    left: 377px;
+    left: 300px;
     cursor: pointer;
     color: #404040;
 }
@@ -127,7 +129,8 @@ a + a {
 
 @media screen and (max-width: 360px) {
     form {
-        max-width: 15rem;
+        width: auto;
+        max-width: 32rem;
     }
     
     #span-login {
@@ -149,7 +152,6 @@ a + a {
 
 @media screen and (max-width: 480px) {
     form {
-        padding: 2rem;
         max-width: 5rem;
         min-height: 35rem;
     }
