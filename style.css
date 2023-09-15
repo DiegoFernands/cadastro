@@ -33,6 +33,12 @@ label {
     transition: 0.15s linear;
 }
 
+label span {
+    position: relative;
+    top: -66px;
+    left: 300px;
+}
+
 label:focus-within {
     color: #251e2b;
 }
@@ -98,63 +104,3 @@ a:first-of-type {
 a + a {
     margin-top: 1.125rem;
 }
-
-.label-icon {
-    display: grid;
-    grid-template-areas: 
-    "header heasder"
-    "footer";
-}
-
-/* 
-@media screen and (max-width: 360px) {
-    form {
-        width: auto;
-        max-width: 32rem;
-    }
-    
-    #span-login {
-        position: relative;
-        top: -67px;
-        left: 240px;
-        cursor: pointer;
-        color: #404040;
-    }
-
-    #span-senha_cadastro {
-        position: relative;
-        top: -68px;
-        left: 224px;
-        cursor: pointer;
-        color: #404040;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    form {
-        max-width: 5rem;
-        min-height: 35rem;
-    }
-    
-    #span-login {
-        position: relative;
-        top: -67px;
-        left: 300px;
-        cursor: pointer;
-        color: #404040;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    form {
-        max-width: 20rem;
-    }
-
-    #span-login {
-        position: relative;
-        top: -67px;
-        left: 300px;
-        cursor: pointer;
-        color: #404040;
-    }
-} */
