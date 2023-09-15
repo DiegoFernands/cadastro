@@ -112,7 +112,7 @@ a + a {
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 396px) {
     label span{
         position: relative;
         top: -66px;
@@ -120,7 +120,7 @@ a + a {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     label span{
         position: relative;
         top: -66px;
