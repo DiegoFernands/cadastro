@@ -19,7 +19,23 @@ function validarSenha(senha) {
     } else {
       return false;
     }
-  }
+}
+
+function validarNome(nome) {
+    if(nome.length < 3){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function minimoUsuario(usuario) {
+    if(usuario.length <= 4){
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function criaUsuario(nome, email, usuario, senha) {
     
@@ -47,6 +63,7 @@ form.addEventListener('submit', event => {
     const avisoUsuario = document.getElementById('avisoUsuario');
     const confereSenha = document.getElementById('avisoSenha');
     const minimoSenha = document.getElementById('minimoSenha');
+    const minimoNome = document.getElementById('minimoNome');
 
     const verificaEmail = listaRecuperada.some(function(objeto) {
         return objeto.email === email;
@@ -56,8 +73,14 @@ form.addEventListener('submit', event => {
         return objeto.usuario === usuario;
     });
     
-    avisoUsuario.textContent = ''
+    minimoNome.textContent = '';
+    minimoSenha.textContent = '';
+    avisoUsuario.textContent = '';
 
+    if(validarNome(nome) === true){
+        minimoNome.textContent = 'Nome deve ter no minímo 3 caracteres.'
+        return;
+    }
     
     if(!validarEmail(email)){
         avisoEmail.textContent = 'Email invalido';
@@ -71,6 +94,10 @@ form.addEventListener('submit', event => {
     
     avisoEmail.textContent = ''
     
+    if(minimoUsuario(usuario) === true) {
+        avisoUsuario.textContent = 'Usuario deve ter no minímo 5 caracteres.'
+    }
+
     if (verificaUsuario) {
         avisoUsuario.textContent = 'Usuário ja existe.'
         return;
