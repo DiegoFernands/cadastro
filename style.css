@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
     background: #211c22;
     font-family: sans-serif;
     display: flex;
@@ -26,7 +24,6 @@ form {
     padding: 4rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0, 0.15);
-    margin-top: 300px;
 }
 
 label {
@@ -102,31 +99,14 @@ a + a {
     margin-top: 1.125rem;
 }
 
-#span-login {
-    position: relative;
-    top: -67px;
-    left: 300px;
-    cursor: pointer;
-    color: #404040;
+.label-icon {
+    display: grid;
+    grid-template-areas: 
+    "header heasder"
+    "footer";
 }
 
-#span-senha_cadastro {
-    position: relative;
-    top: -68px;
-    left: 380px;
-    cursor: pointer;
-    color: #404040;
-}
-
-#formCadastro {
-    margin-top: 25px;
-}
-
-#loginForm {
-    margin-top: 110px;
-}
-
-
+/* 
 @media screen and (max-width: 360px) {
     form {
         width: auto;
@@ -177,4 +157,4 @@ a + a {
         cursor: pointer;
         color: #404040;
     }
-}
+} */
