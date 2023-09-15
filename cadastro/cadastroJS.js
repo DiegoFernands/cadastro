@@ -11,6 +11,15 @@ function validarEmail(email) {
     return regex.test(email);
 }
 
+function validarSenha(senha) {
+    const regex = /^.{8,}$/;
+    
+    if (regex.test(senha)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 function criaUsuario(nome, email, usuario, senha) {
     
@@ -37,6 +46,7 @@ form.addEventListener('submit', event => {
     const avisoEmail = document.getElementById('avisoEmail');
     const avisoUsuario = document.getElementById('avisoUsuario');
     const confereSenha = document.getElementById('avisoSenha');
+    const minimoSenha = document.getElementById('minimoSenha');
 
     const verificaEmail = listaRecuperada.some(function(objeto) {
         return objeto.email === email;
@@ -48,11 +58,12 @@ form.addEventListener('submit', event => {
     
     avisoUsuario.textContent = ''
 
+    
     if(!validarEmail(email)){
         avisoEmail.textContent = 'Email invalido';
         return;
     }
-
+    
     if(verificaEmail){
         avisoEmail.textContent = 'Email já existente.';
         return;
@@ -65,8 +76,13 @@ form.addEventListener('submit', event => {
         return;
     }
     
+    if(validarSenha(senha) === false){
+        minimoSenha.textContent = 'A senha deve ter no minímo 8 caracteres'
+        return;
+    }
+
     if(senha !== confirmaSenha){
-        confereSenha.textContent = 'Senha não é igual';
+        confereSenha.textContent = 'Senha não confere.';
         return;
     }
     
@@ -77,6 +93,6 @@ form.addEventListener('submit', event => {
     window.location.href = '../cadastrado/cadastrado.html'
 });
 
-document.getElementById('teste').addEventListener('click', () => {
+document.getElementById('span-senha_cadastro').addEventListener('click', () => {
     document.getElementById('confirmaSenha').type = 'text';
 });

@@ -37,6 +37,7 @@ label span {
     position: relative;
     top: -66px;
     left: 300px;
+    cursor: pointer;
 }
 
 label:focus-within {
@@ -104,6 +105,7 @@ a:first-of-type {
 a + a {
     margin-top: 1.125rem;
 }
+
 @media screen and (max-width: 460px) {
     label span{
         position: relative;
