@@ -83,19 +83,19 @@ form.addEventListener('submit', event => {
     }
     
     if(!validarEmail(email)){
-        avisoEmail.textContent = 'Email invalido';
+        avisoEmail.textContent = 'Email inválido';
         return;
     }
     
     if(verificaEmail){
-        avisoEmail.textContent = 'Email já existente.';
+        avisoEmail.textContent = 'Email já existe.';
         return;
     }
     
     avisoEmail.textContent = ''
     
     if(minimoUsuario(usuario) === true) {
-        avisoUsuario.textContent = 'Usuario deve ter no minímo 5 caracteres.'
+        avisoUsuario.textContent = 'Usuário deve ter no minímo 5 caracteres.'
     }
 
     if (verificaUsuario) {
